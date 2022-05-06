@@ -21,7 +21,6 @@
     </head>
     <body>
         <header>
-            div class="container">
             <div class="row pt-5">
                 <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
                     <h1 class="display-4 text-center py-2">Star Wars: A New Hope</h1>
@@ -36,7 +35,7 @@
 
         <main class="container">
             <div class="accordion mx-md-5 my-5 rounded-0" id="accordionExample">
-  <!--Especies-->
+                <!--Especies-->
                 <div class="accordion-item rounded-0">
                     <h2 class="accordion-header bg-dark" id="headingOne">
                         <button class="accordion-button rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Especie, raza</button>
@@ -48,31 +47,34 @@
                         </div>
                     </div>
                 </div>
-<!--Masculinos y femeninos-->
+                <!--Masculinos y femeninos-->
                 <div class="accordion-item rounded-0">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Género</button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-black-50">
-                            <p>En el episodio IV de Star Wars hay <span id="total_masculino"></span> personajes masculinos, <span id="total_femenino"></span> personajes femeninos y un total de <span id="total_nn"></span> con género no definido</p>
+                            <p>En la saga de Star Wars hay <span id="total_masculino"></span> personajes masculinos, <span id="total_femenino"></span> personajes femeninos y un total de <span id="total_nn"></span> con género no definido</p>
                             <canvas id="segundografico" width="100" height="100" class="m-5"></canvas>
                         </div>
                     </div>
                 </div>
-<!--Apariciones-->
+                <!--Humanos por episodio-->
                 <div class="accordion-item rounded-0">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Popularidad</button>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Personajes Humanos nuevos por episodio</button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-black-50">
-                            <p>Algunos personajes fueron más recordados que otros</p>
+                            <p>
+                                En la primera película (por orden de estreno) hay <span id="ph1"></span> personajes humanos, en la segunda hay <span id="ph2"></span> personajes humanos nuevos, en la tercera <span id="ph3"></span> , en el
+                                cuarto <span id="ph4"></span>, en la quinta <span id="ph5"></span> y en la sexta tan solo<span id="ph6"></span>
+                            </p>
                             <canvas id="tercergrafico" width="100" height="100" class="m-5"></canvas>
                         </div>
                     </div>
                 </div>
-<!--Otros-->
+                <!--Otros-->
                 <div class="accordion-item rounded-0">
                     <h2 class="accordion-header" id="headingFour">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Sobrevivientes</button>
@@ -84,14 +86,17 @@
                         </div>
                     </div>
                 </div>
-                <!--Otro más-->
+                <!--Color de ojos de los personajes-->
                 <div class="accordion-item rounded-0">
                     <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Sobrevivientes por sexo</button>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Color de ojos de los personajes</button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                         <div class="accordion-body text-black-50">
-                            <p>Sobrevivieron <span id="Hvivos"></span> hombres y <span id="Mvivos"></span> mujeres. Y murieron <span id="Hmuertos"></span> hombres y <span id="Mmuertos"></span> mujeres.</p>
+                            <p>
+                                Entre a lista de personajes hay <span id="oa"></span> personajes con ojos azules, <span id="or"></span> personajes con ojos rojos <span id="ov"></span> personajes con ojos verdes,
+                                <span id="oc"></span> personajes con ojos café y <span id="oj"></span> con otros colores de ojos (naranja, amarillo, miel, etc).
+                            </p>
                             <canvas id="quintografico" width="100" height="100" class="m-5"></canvas>
                         </div>
                     </div>
@@ -100,7 +105,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
-                    <p>Los registros de 891 representan una parte de los más de 2.400 personas que viajaban en el Titanic aquel fatídico 14 de abril de 1912, cuando la nave choca con el iceberg faltando minutos para la medianoche.</p>
+                    <p>Los registros de los personajes fueron extraídos de la web de swapi.</p>
                 </div>
             </div>
         </main>
@@ -109,10 +114,7 @@
             <div class="container">
                 <div class="row py-5">
                     <div class="col-sm-10 col-md-8 col-lg-6 mx-auto small text-center">
-                        <p>
-                            Fuentes: <a href="https://historia.nationalgeographic.com.es/a/historia-titanic-tragedia-barco-insumergible_16344">La historia del Titanic, la tragedia del barco insumergible</a>,
-                            <a href="https://rpubs.com/paraneda/titanic">RPubs - Titanic</a>, otra y otra más.
-                        </p>
+                        <p>Fuente: <a href="https://swapi.dev/">The Star Wars API</a>,</p>
                     </div>
                 </div>
             </div>
@@ -142,10 +144,38 @@
                 const data = await consulta.json();
                 console.log(data);
 
-                //genero
+                //variables
+                //especies
+                var personajehumano = 0;
+                var personajenohumano = 0;
+
+                //género
                 var femenino = 0;
                 var masculino = 0;
                 var nn = 0;
+
+                //personajes por película
+                var episodio1 = 0;
+                var episodio2 = 0;
+                var episodio3 = 0;
+                var episodio4 = 0;
+                var episodio5 = 0;
+                var episodio6 = 0;
+
+                //personajes
+                var personajes1 = [];
+                var personajes2 = [];
+                var personajes3 = [];
+                var personajes4 = [];
+                var personajes5 = [];
+                var personajes6 = [];
+
+                //ojos
+                var ojoscafes = 0;
+                var ojosverdes = 0;
+                var ojosrojos = 0;
+                var ojosazules = 0;
+                var otrosojos = 0;
 
                 //consultando en cada elemento del arreglo
                 data.forEach((d) => {
@@ -155,28 +185,146 @@
                     if (d.gender == "female") {
                         femenino = femenino + 1;
                     } else {
-                        nn = nn + 1; }
+                        nn = nn + 1;
+                    }
+
+                    if (d.species == "http://swapi.co/api/species/1/") {
+                        personajehumano = personajehumano + 1;
+                    } else {
+                        personajenohumano = personajenohumano + 1;
+                    }
+
+                    if (d.films.includes("http://swapi.co/api/films/1/") && d.species == "http://swapi.co/api/species/1/") {
+                        episodio1 = episodio1 + 1;
+                        personajes1.push(d.name);
+                    } else if (d.films.includes("http://swapi.co/api/films/2/") && d.species == "http://swapi.co/api/species/1/") {
+                        episodio2 = episodio2 + 1;
+                        personajes2.push(d.name);
+                    } else if (d.films.includes("http://swapi.co/api/films/3/") && d.species == "http://swapi.co/api/species/1/") {
+                        episodio3 = episodio3 + 1;
+                        personajes3.push(d.name);
+                    } else if (d.films.includes("http://swapi.co/api/films/4/") && d.species == "http://swapi.co/api/species/1/") {
+                        episodio4 = episodio4 + 1;
+                        personajes4.push(d.name);
+                    } else if (d.films.includes("http://swapi.co/api/films/5/") && d.species == "http://swapi.co/api/species/1/") {
+                        episodio5 = episodio5 + 1;
+                        personajes5.push(d.name);
+                    } else if (d.films.includes("http://swapi.co/api/films/6/") && d.species == "http://swapi.co/api/species/1/") {
+                        episodio6 = episodio6 + 1;
+                        personajes6.push(d.name);
+                    }
+
+                    if (d.eye_color == "brown") {
+                        ojoscafes = ojoscafes + 1;
+                    } else if (d.eye_color == "blue") {
+                        ojosazules = ojosazules + 1;
+                    } else if (d.eye_color == "red") {
+                        ojosrojos = ojosrojos + 1;
+                    } else if (d.eye_color == "green") {
+                        ojosverdes = ojosverdes + 1;
+                    } else {
+                        otrosojos = otrosojos + 1;
+                    }
                 });
+
+                //consola
+                console.log(personajehumano);
+                console.log(personajenohumano);
 
                 console.log(femenino);
                 console.log(masculino);
                 console.log(nn);
 
+                console.log(episodio1);
+                console.log(episodio2);
+                console.log(episodio3);
+                console.log(episodio4);
+                console.log(episodio5);
+                console.log(episodio6);
 
+                console.log(personajes1);
+                console.log(personajes2);
+                console.log(personajes3);
+                console.log(personajes4);
+                console.log(personajes5);
+                console.log(personajes6);
 
-                document.querySelector("#total_femenino").innerHTML = femenino;
+                //identificador
+
+                document.querySelector("#personajes_humanos").innerHTML = personajehumano;
+                document.querySelector("#personajes_nohumanos").innerHTML = personajenohumano;
                 document.querySelector("#total_masculino").innerHTML = masculino;
                 document.querySelector("#total_nn").innerHTML = nn;
 
+                document.querySelector("#ph1").innerHTML = episodio1;
+                document.querySelector("#ph2").innerHTML = episodio2;
+                document.querySelector("#ph3").innerHTML = episodio3;
+                document.querySelector("#ph4").innerHTML = episodio4;
+                document.querySelector("#ph5").innerHTML = episodio5;
+                document.querySelector("#ph6").innerHTML = episodio6;
 
-                new Chart(document.getElementById("segundografico").getContext("2d"), {
-                    type: "pie",
+                document.querySelector("#oa").innerHTML = ojosazules;
+                document.querySelector("#or").innerHTML = ojosrojos;
+                document.querySelector("#ov").innerHTML = ojosverdes;
+                document.querySelector("#oc").innerHTML = ojoscafes;
+                document.querySelector("#oj").innerHTML = otrosojos;
+
+                //gráficos
+                new Chart(document.getElementById("primergrafico").getContext("2d"), {
+                    type: "bar",
                     data: {
-                        labels: ["Femeninos", "Masculinos", "No determinado"],
-                        datasets: [{ data: [femenino, masculino, nn], label: "Género", backgroundColor: ["#9ebcda", "#8856a7", "#5ebcda"] }],
+                        labels: ["humano", "nohumano"],
+                        datasets: [{ data: [personajehumano, personajenohumano], label: "Especie", backgroundColor: ["##024959", "#F2C12E"] }],
+                        clip: { left: 5, top: false, right: -2, bottom: 0 },
                     },
                 });
-              
+
+                new Chart(document.getElementById("segundografico").getContext("2d"), {
+                    type: "bar",
+                    data: {
+                        labels: ["Femeninos", "Masculinos", "No determinado"],
+                        datasets: [{ data: [femenino, masculino, nn], label: "Género", backgroundColor: ["#F23030", "#267365", "#F29F05"] }],
+                    },
+                    options: {
+                        indexAxis: "y",
+                    },
+                });
+
+                new Chart(document.getElementById("tercergrafico").getContext("2d"), {
+                    type: "bar",
+                    data: {
+                        labels: ["A New Hope", "The Empire Strikes Back", "Return of the Jedi", "The Phantom Menace", "Attack of the Clones"],
+                        datasets: [{ data: [episodio1, episodio2, episodio3, episodio4, episodio5, episodio6], label: "Personajes", backgroundColor: ["#F25E95", "#D989B5", "#403C59", "#54628C", "#6D80A6"] }],
+                    },
+                    options: {
+                        indexAxis: "y",
+                    },
+                });
+
+                new Chart(document.getElementById("cuartografico").getContext("2d"), {
+                    type: "bubble",
+                    data: {
+                        x: 4,
+                        labels: ["personajes humanos"],
+                        datasets: [
+                            { data: [personajes1], label: "personajes humanos 1", backgroundColor: "#F25E95", pointRadius: 10, pointHoverRadius: 12 },
+                            { data: [personajes2], label: "personajes humanos 2", backgroundColor: "#F25E95", pointRadius: 10, pointHoverRadius: 12 },
+                        ],
+                    },
+                });
+
+                new Chart(document.getElementById("quintografico").getContext("2d"), {
+                    type: "doughnut",
+                    data: {
+                        labels: ["Azules", "Rojos", "Verdes", "Cafes", "Otros"],
+                        datasets: [{ data: [ojosazules, ojosrojos, ojosverdes, ojoscafes, otrosojos], label: "Color de ojos", backgroundColor: ["#13678A", "#A62B1F", "#2E5902", "#593E25", "#F2AE30"] }],
+                    },
+                    options: {
+                        indexAxis: "y",
+                    },
+                });
+
+                //fin
             }
             todo().catch((error) => console.error(error));
         </script>
